@@ -10,13 +10,13 @@ limot:
   chgP_chgP: 1.0e-2
   rubostNum: 1.0 
   saveObject: false
-  sequence: "04"
+  sequence: "jiading"
   vel_threshold: 1.0
   laserCloudInfoHandler_size: 100   # 100 is enough
 
   # Topics
-  pointCloudTopic: "/points_raw"               # Point cloud data
-  imuTopic: "/imu_raw"                         # IMU data
+  pointCloudTopic: "/velodyne_points"               # Point cloud data
+  imuTopic: "/imu"                         # IMU data
   odomTopic: "odometry/imu"                   # IMU pre-preintegration odometry, same frequency as IMU
   gpsTopic: "odometry/gpsz"                   # GPS odometry topic from navsat, see module_navsat.launch file
 
@@ -40,7 +40,7 @@ limot:
   # Sensor Settings
   sensor: velodyne                            # lidar sensor type, either 'velodyne' or 'ouster'
   N_SCAN: 64                               # number of lidar channel (i.e., 16, 32, 64, 128)
-  Horizon_SCAN: 1800                          # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048)
+  Horizon_SCAN: 2000                          # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048)
   downsampleRate: 4                         # default: 1. Downsample your data if too many points. i.e., 16 = 64 / 4, 16 = 16 / 1  
   lidarMinRange: 1.0                          # default: 1.0, minimum lidar range to be used
   lidarMaxRange: 1000.0                       # default: 1000.0, maximum lidar range to be used
@@ -54,15 +54,13 @@ limot:
   imuRPYWeight: 0.01
 
   # Extrinsics (lidar -> IMU) // in fact it's imu -> lidar
-  extrinsicTrans: [-8.086759e-01, 3.195559e-01, -7.997231e-01]
-  extrinsicRot: [9.999976e-01, 7.553071e-04, -2.035826e-03, -7.854027e-04, 9.998898e-01, -1.482298e-02, 2.024406e-03, 1.482454e-02, 9.998881e-01]
-  extrinsicRPY: [9.999976e-01, 7.553071e-04, -2.035826e-03, -7.854027e-04, 9.998898e-01, -1.482298e-02, 2.024406e-03, 1.482454e-02, 9.998881e-01]
-  # extrinsicRot: [1, 0, 0,
-  #                 0, 1, 0,
-  #                 0, 0, 1]
-  # extrinsicRPY: [1, 0, 0,
-  #                 0, 1, 0,
-  #                 0, 0, 1]
+  extrinsicTrans: [-9.3000e-01, -1.410000e-01, -1.400]
+  extrinsicRot: [1, 0, 0,
+                  0, 1, 0,
+                  0, 0, 1]
+  extrinsicRPY: [1, 0, 0,
+                  0, 1, 0,
+                  0, 0, 1]
 
   # LOAM feature threshold
   edgeThreshold: 1.0

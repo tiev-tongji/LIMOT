@@ -51,6 +51,10 @@ rosbag play your-bag.bag
 * Download the KITTI tracking dataset to test the functionality of the LIMOT. The dataset below are configured to run using the [params_kitti.yaml](./config/params_kitti.yaml):
     - **KITTI tracking dataset:** [[Google Drive](https://drive.google.com/drive/folders/144Kp2WYfHIF6SbKHDCtjTswOk2E1_gPg?usp=sharing)]
 
+* Download the self-collected dataset to test the functionality of the LIMOT. The dataset below are configured to run using the [params_hdl64.yaml](./config/params_hdl64.yaml):
+    - **Self-collected dataset:** [[Google Drive](https://drive.google.com/drive/folders/1-30POMAEe8F7kGfUjNHDNh8gOYRHjOt2?usp=sharing)]   
+    
+
 ## Paper
 
 * Our previous work DL-SLOT has been accepted by the IEEE Transactions on Intelligent Vehicles.
