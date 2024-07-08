@@ -57,6 +57,17 @@ rosbag play your-bag.bag
 
 ## Paper
 
+* LIMOT has been accepted by IEEE Robotics and Automation Letters.
+```
+@article{zhu2024limot,
+  title={LIMOT: a tightly-coupled system for LiDAR-inertial odometry and multi-object tracking},
+  author={Zhu, Zhongyang and Zhao, Junqiao and Huang, Kai and Tian, Xuebo and Lin, Jiaye and Ye, Chen},
+  journal={IEEE Robotics and Automation Letters},
+  year={2024},
+  publisher={IEEE}
+}
+```
+
 * Our previous work DL-SLOT has been accepted by the IEEE Transactions on Intelligent Vehicles.
 ```
 @article{tian2023dl,
@@ -67,4 +78,6 @@ rosbag play your-bag.bag
   publisher={IEEE}
 }
 ```
-* This paper has been submitted to RA-L.
+
+## Acknowledgments
+Thanks for LOAM(J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time) and [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM).
